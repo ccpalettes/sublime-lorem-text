@@ -1,0 +1,10 @@
+[
+  {
+    "caption": "Lorem Text",
+    "command": "lorem_text",
+    "args": {
+        "word_count": null,
+        "paragraph_count": null
+    }
+  }
+]

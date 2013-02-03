@@ -1,0 +1,15 @@
+{
+    // The default number of parapraphs to be inserted
+    "default_paragraph_count": 1,
+
+    // The default number of words for each parapraph to be inserted
+    "default_word_count": 80,
+
+    // If true, the generated text will always starts with "Lorem ipsum"
+    "always_start_with_lorem_ipsum": true,
+
+    // If true, it creates different random text content every time, otherwise,
+    // it creates text from a fixed content every time and the "always start with 
+    // lorem ipsum" option will be forced enabled.
+    "generate_random_text": true
+}

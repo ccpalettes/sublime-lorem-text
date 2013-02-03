@@ -1,0 +1,10 @@
+[  
+    {  
+        "keys": ["alt+l"],
+        "command": "lorem_text",
+        "args": {
+            "word_count": null,
+            "paragraph_count": null
+        }
+    }  
+]
