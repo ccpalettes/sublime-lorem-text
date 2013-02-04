@@ -4,11 +4,6 @@ import random
 import os
 import re
 
-plugin_package_path = os.getcwd()
-help_path = os.path.join(plugin_package_path, "lt")
-plugin_folder_name = os.path.split(os.path.dirname(help_path))[1]
-
-
 def str_validation(content):
     return re.match(r"^lorem\( *\d* *,? *\d* *\)$", content, re.IGNORECASE)
 
@@ -37,7 +32,7 @@ class LoremTextCommand(sublime_plugin.TextCommand):
         packages_path = sublime.packages_path()
 
         try:
-            word_list_path = os.path.join(plugin_package_path, "wordlist/word_list_random.txt")
+            word_list_path = os.path.join(packages_path, __package__, "wordlist/word_list_random.txt")
             f = open(word_list_path, "r")
             lines = f.readlines()
             words = []
@@ -51,7 +46,7 @@ class LoremTextCommand(sublime_plugin.TextCommand):
             pass
 
         try:
-            word_list_path = os.path.join(plugin_package_path, "wordlist/word_list_fixed.txt")
+            word_list_path = os.path.join(packages_path, __package__, "wordlist/word_list_fixed.txt")
             f = open(word_list_path, "r")
             lines = f.readlines()
             words = []
@@ -74,9 +69,11 @@ class LoremTextCommand(sublime_plugin.TextCommand):
 
     def write_sublime_menu(self):
         # always keep the file paths in "Main.sublime-menu" correct
+        packages_path = sublime.packages_path()
+
         menu_tpl = None
         try:
-            tpl_path = os.path.join(plugin_package_path, "Main.sublime-menu.tpl")
+            tpl_path = os.path.join(packages_path, __package__, "Main.sublime-menu.tpl")
             f = open(tpl_path, "r")
             menu_tpl = f.read()
             f.close()
@@ -84,9 +81,10 @@ class LoremTextCommand(sublime_plugin.TextCommand):
             pass
 
         if (menu_tpl):
-            menu_text = re.sub(r"\$\{_plugin_folder_name_\}", plugin_folder_name, menu_tpl)
+            menu_text = re.sub(r"\$\{_plugin_folder_name_\}", __package__, menu_tpl)
+
             try:
-                menu_file_path = os.path.join(plugin_package_path, "Main.sublime-menu")
+                menu_file_path = os.path.join(packages_path, __package__, "Main.sublime-menu")
                 menu_file = open(menu_file_path, "w")
                 menu_file.write(menu_text)
                 menu_file.close()
@@ -122,13 +120,13 @@ class LoremTextCommand(sublime_plugin.TextCommand):
             self.view.set_status("LoremText", "LoremText plugin could not load fixed word list")
             return
 
-        if (not isinstance(word_count, (int, long))):
+        if (not isinstance(word_count, int)):
             default_word_count = settings.get("default_word_count")
-            if (isinstance(default_word_count, (int, long)) and default_word_count > 0):
+            if (isinstance(default_word_count, int) and default_word_count > 0):
                 word_count = default_word_count
-        if (not isinstance(paragraph_count, (int, long))):
+        if (not isinstance(paragraph_count, int)):
             default_paragraph_count = settings.get("default_paragraph_count")
-            if (isinstance(default_paragraph_count, (int, long)) and default_paragraph_count > 0):
+            if (isinstance(default_paragraph_count, int) and default_paragraph_count > 0):
                 paragraph_count = default_paragraph_count
 
         always_start_with_lorem_ipsum = settings.get("always_start_with_lorem_ipsum")
