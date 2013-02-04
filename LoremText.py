@@ -4,7 +4,7 @@ import random
 import os
 import re
 
-plugin_name = "LoremText"
+plugin_package_path = os.getcwd()
 
 
 def str_validation(content):
@@ -34,7 +34,7 @@ class LoremTextCommand(sublime_plugin.TextCommand):
         packages_path = sublime.packages_path()
 
         try:
-            word_list_path = os.path.join(packages_path, plugin_name, "wordlist/word_list_random.txt")
+            word_list_path = os.path.join(plugin_package_path, "wordlist/word_list_random.txt")
             f = open(word_list_path, "r")
             lines = f.readlines()
             words = []
@@ -48,7 +48,7 @@ class LoremTextCommand(sublime_plugin.TextCommand):
             pass
 
         try:
-            word_list_path = os.path.join(packages_path, plugin_name, "wordlist/word_list_fixed.txt")
+            word_list_path = os.path.join(plugin_package_path, "wordlist/word_list_fixed.txt")
             f = open(word_list_path, "r")
             lines = f.readlines()
             words = []
