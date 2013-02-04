@@ -5,6 +5,8 @@ import os
 import re
 
 plugin_package_path = os.getcwd()
+help_path = os.path.join(plugin_package_path, "lt")
+plugin_folder_name = os.path.split(os.path.dirname(help_path))[1]
 
 
 def str_validation(content):
@@ -29,6 +31,7 @@ class LoremTextCommand(sublime_plugin.TextCommand):
 
         self.settings = None
         self.load_settings()
+        self.write_sublime_menu()
 
     def init_word_list(self):
         packages_path = sublime.packages_path()
@@ -68,6 +71,27 @@ class LoremTextCommand(sublime_plugin.TextCommand):
         settings.add_on_change("default_paragraph_count", self.load_settings)
 
         self.settings = settings
+
+    def write_sublime_menu(self):
+        # always keep the file paths in "Main.sublime-menu" correct
+        menu_tpl = None
+        try:
+            tpl_path = os.path.join(plugin_package_path, "Main.sublime-menu.tpl")
+            f = open(tpl_path, "r")
+            menu_tpl = f.read()
+            f.close()
+        except IOError:
+            pass
+
+        if (menu_tpl):
+            menu_text = re.sub(r"\$\{_plugin_folder_name_\}", plugin_folder_name, menu_tpl)
+            try:
+                menu_file_path = os.path.join(plugin_package_path, "Main.sublime-menu")
+                menu_file = open(menu_file_path, "w")
+                menu_file.write(menu_text)
+                menu_file.close()
+            except IOError:
+                pass
 
     def get_word(self):
         word = random.choice(self.random_word_list)
