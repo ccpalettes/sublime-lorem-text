@@ -60,19 +60,19 @@
                             {
                                 "caption": "README",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/LoremText/readme.md"}
+                                "args": {"file": "${packages}/LoremText/README.md"}
                             },
                             {
                                 "caption": "-"
                             },
                             {
-                                "caption": "Settings – Default",
+                                "caption": "Settings - Default",
                                 "command": "open_file",
                                 "args": {"file": "${packages}/LoremText/LoremText.sublime-settings"}
                                 
                             },
                             {
-                                "caption": "Settings – User",
+                                "caption": "Settings - User",
                                 "command": "open_file",
                                 "args": {"file": "${packages}/User/LoremText.sublime-settings"}
                             },
@@ -80,7 +80,7 @@
                                 "caption": "-"
                             },
                             {
-                                "caption": "Key Bindings – Default",
+                                "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/LoremText/Default (OSX).sublime-keymap",
@@ -88,7 +88,7 @@
                                 }
                             },
                             {
-                                "caption": "Key Bindings – Default",
+                                "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/LoremText/Default (Windows).sublime-keymap",
@@ -96,7 +96,7 @@
                                 }
                             },
                             {
-                                "caption": "Key Bindings – Default",
+                                "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/LoremText/Default (Linux).sublime-keymap",
@@ -104,7 +104,7 @@
                                 }
                             },
                             {
-                                "caption": "Key Bindings – User",
+                                "caption": "Key Bindings - User",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/User/Default (OSX).sublime-keymap",
@@ -113,7 +113,7 @@
                                 
                             },
                             {
-                                "caption": "Key Bindings – User",
+                                "caption": "Key Bindings - User",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/User/Default (Windows).sublime-keymap",
@@ -122,7 +122,7 @@
                                 
                             },
                             {
-                                "caption": "Key Bindings – User",
+                                "caption": "Key Bindings - User",
                                 "command": "open_file",
                                 "args": {
                                     "file": "${packages}/User/Default (Linux).sublime-keymap",
