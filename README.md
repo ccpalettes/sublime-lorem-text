@@ -11,19 +11,21 @@ real meaningful content.
 Installation
 ------------
 
-**With Git:** Clone the repository to the Sublime Text "Packages" directory:
+**Without Git:** [Download](https://github.com/ccpalettes/sublime-lorem-text/archive/sublime-text-3-beta.zip)
+the latest source from GitHub and copy the folder to the Sublime Text "Packages"
+directory.
+
+**With Git:** Clone the repository to the Sublime Text "Packages" directory,
+then switch to branch "sublime-text-3-beta":
 
     git clone https://github.com/ccpalettes/sublime-lorem-text.git
+    git checkout sublime-text-3-beta
 
 You can open the "Packages" directory by following the steps below:
 
 * OS X: select menu entry `Sublime Text 3 -> Preferences -> Browse Packages...`
 * Windows: select menu entry `Preferences -> Browse Packages...`
 * Linux: select menu entry `Preferences -> Browse Packages...`
-
-**Without Git:** [Download](https://github.com/ccpalettes/sublime-lorem-text/archive/sublime-text-3-beta.zip)
-the latest source from GitHub and copy the folder to the Sublime Text "Packages"
-directory.
 
 Usage
 -----
