@@ -1,0 +1,20 @@
+{
+    "schema_version": "1.2",
+    "packages": [
+        {
+            "name": "LoremText",
+            "description": "LoremText is a plugin for sublime text 2 that creates random/fixed lorem ipsum text. Lorem ipsum is commonly used as placeholder text before you have the real meaningful content.",
+            "author": "Jeremy Yu",
+            "homepage": "https://github.com/ccpalettes",
+            "last_modified": "2013-02-05 05:01:28 GMT-08:00",
+            "platforms": {
+                "*": [
+                    {
+                        "version": "1.0.2",
+                        "url": "https://nodeload.github.com/ccpalettes/sublime-lorem-text/zip/v1.0.2"
+                    }
+                ]
+            }
+        }
+    ]
+}

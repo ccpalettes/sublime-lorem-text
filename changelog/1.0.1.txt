@@ -1,0 +1,6 @@
+LoremText v1.0.1 Changelog
+==========================
+
+CHANGES/FIXES
+
+- Fix issues if the name of the package folder is not "LoremText", now you can rename the package folder as long as you like it.

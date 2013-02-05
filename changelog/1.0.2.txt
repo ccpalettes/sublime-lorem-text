@@ -1,0 +1,6 @@
+LoremText v1.0.2 Changelog
+==========================
+
+CHANGES/FIXES
+
+- Add supported files for Package Control.
