@@ -1,7 +1,7 @@
 LoremText
 =========
  
-[LoremText](https://github.com/ccpalettes/sublime-lorem-text) is a plugin for
+[LoremText](http://ccpalettes.github.com/sublime-lorem-text) is a plugin for
 [sublime text 2](http://www.sublimetext.com/) that creates random/fixed lorem
 ipsum text. Lorem ipsum is commonly used as placeholder text before you have the
 real meaningful content.
