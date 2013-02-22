@@ -1,0 +1,6 @@
+LoremText v1.0.3 Changelog
+==========================
+
+NEW FEATURES
+
+- Support installing through Package Control. 

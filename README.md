@@ -11,6 +11,8 @@ real meaningful content.
 Installation
 ------------
 
+**With Package Control:** This is the easiest way to install this package. Once you have the [Package Control](http://wbond.net/sublime_packages/package_control) installed, open the Command Palette and select `Package Control: Install Package`, then select `LoremText` when the package list appears.
+
 **With Git:** Clone the repository to the Sublime Text "Packages" directory:
 
     git clone https://github.com/ccpalettes/sublime-lorem-text.git
@@ -28,7 +30,7 @@ directory.
 Usage
 -----
 
-There are a few ways to use the LoremText plugin.
+There are four ways to use the LoremText plugin.
 
 * Just press the shortcut key (`alt+l` on all platforms) to insert some lorem
 ipsum text.
@@ -40,6 +42,9 @@ paragraph contains. For example, `lorem(100, 3)` means that it will create three
 paragraphs of lorem ipsum text and each paragraph contains one hundred words.
 Both the two parameters are optional, if you leave them empty, the plugin will
 use default values that are configured in the settings file.
+
+      ![Screenshot Example](https://raw.github.com/ccpalettes/sublime-lorem-text/gh-pages/screenshots/example.gif)
+
 * Select menu entry `Edit -> Lorem Text...`, active the sub-menu commands.
 * Go to Command Palette, find "Lorem Text" command.
 
