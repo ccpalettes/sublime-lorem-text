@@ -4,7 +4,7 @@
         {
             "name": "LoremText",
             "description": "Generate random or fixed lorem ipsum placeholder text.",
-            "author": "Jeremy Yu",
+            "author": "Evan Yu",
             "homepage": "http://ccpalettes.github.com/sublime-lorem-text",
             "last_modified": "2013-02-23 01:55:53",
             "platforms": {

@@ -75,7 +75,7 @@ License
 
 The code is under MIT license:
 
-Copyright (c) 2013 [Jeremy Yu](https://github.com/ccpalettes) <ccpalettes@gmail.com>
+Copyright (c) 2013
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
